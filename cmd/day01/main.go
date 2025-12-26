@@ -147,6 +147,11 @@ func comparemethods(data []string) {
 func alterDial(rotationSize int, sign int, dial int) (int, int) {
 	var zeroCounter int = 0
 	newDial := dial + (rotationSize * sign)
+	leftBound := 0
+	rightBound := 100
+	if (dial == 0) {
+		leftBound = -100
+	}
 	
 	if dial > 0 && newDial <=0 {
 		zeroCounter += int(math.Floor(float64(-newDial)/100)) + 1
