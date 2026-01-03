@@ -16,6 +16,8 @@ func GetFilePath(day string) string {
 	fmt.Println(cwd)
 	if strings.HasSuffix(cwd, "cmd") {
 		path = cwd + "/" + day
+	} else if strings.HasSuffix(cwd, "adventofcode2025") {
+		path = cwd + "/cmd/" + day
 	} else {
 		path = cwd
 	}
@@ -24,6 +26,7 @@ func GetFilePath(day string) string {
 
 func Read(day string, test bool) string {
 	filepath := GetFilePath(day)
+	fmt.Println(filepath)
 	var file string = "example.txt"
 	options, err := os.ReadDir(filepath)
 	if err != nil {
