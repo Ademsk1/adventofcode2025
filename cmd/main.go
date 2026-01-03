@@ -4,6 +4,7 @@ import (
 	"github.com/Ademsk1/adventofcode2025/cmd/day01"
 	"github.com/Ademsk1/adventofcode2025/cmd/day02"
 	"github.com/Ademsk1/adventofcode2025/cmd/day03"
+	"github.com/Ademsk1/adventofcode2025/cmd/day04"
 	"github.com/Ademsk1/adventofcode2025/util/flags"
 )
 
@@ -16,5 +17,7 @@ func main() {
 		day02.Day02(part, useExample)
 	case 3:
 		day03.Day03(part, useExample)
+	case 4:
+		day04.Day04(part, useExample)
 	}
 }

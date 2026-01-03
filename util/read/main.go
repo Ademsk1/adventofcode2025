@@ -67,3 +67,16 @@ func LinesAsArray(data string, sep string) []string {
 	}
 	return baseSplit
 }
+
+func DataAsGrid(data string, sep string) [][]string {
+	lines := LinesAsArray(data, sep)
+	var grid [][]string
+	for i, row := range lines {
+		grid = append(grid, []string{})
+		for _, char := range row {
+			grid[i] = append(grid[i], string(char))
+		}
+	}
+	return grid
+
+}
